@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import {NavLink} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBell} from '@fortawesome/free-regular-svg-icons'
 import {faFire} from '@fortawesome/free-solid-svg-icons'
@@ -13,12 +14,12 @@ function Navbar(){
             </div>
 
             <div className="h-full w-fit flex justify-center items-center mx-1 gap-4">
-            <a className="text-lg" href="">Explore</a>
-            <a className="text-lg" href="">Contest</a>
-            <a className="text-lg" href="">Problems</a>
-            <a className="text-lg" href="">Discuss</a>
-            <a className="text-lg" href="">Interview</a>
-            <a className="text-lg" href="">Store</a>
+            <NavLink className="text-lg" to="">Explore</NavLink>
+            <NavLink className="text-lg" to="">Contest</NavLink>
+            <NavLink className="text-lg" to="">Problems</NavLink>
+            <NavLink className="text-lg" to="">Discuss</NavLink>
+            <NavLink className="text-lg" to="">Interview</NavLink>
+            <NavLink className="text-lg" to="">Store</NavLink>
             </div>
 
          </div>
@@ -31,7 +32,7 @@ function Navbar(){
             <span className="text-orange-500 font-semibold">229</span>
             </div>
             <div className=" w-[2rem] rounded-full overflow-hidden">
-                <img src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png?f=webp&w=256" alt="" />
+                <NavLink to="/user/surjeet"><img src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png?f=webp&w=256" alt="" /></NavLink>
             </div>
             <div className="px-2 py-1 rounded-lg bg-orange-100">
                 <p className="text-orange-500">Premium</p>

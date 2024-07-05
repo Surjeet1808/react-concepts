@@ -1,11 +1,14 @@
 import React from "react"
-import Home from "./components/Home"
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+import {Routes,Route} from 'react-router-dom'
+import Navbar from "./components/Header/Navbar"
+import Footer from "./components/Footer/Footer"
+import User from "./pages/User"
 function App() {
    return <>
    <Navbar/>
-   <Home/>
+   <Routes>
+      <Route path="/user/:u_name" element={<User/>} />
+   </Routes>
    <Footer/>
    </>
 }
