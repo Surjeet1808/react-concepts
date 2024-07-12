@@ -5,7 +5,7 @@ export const Show = () => {
     const [data, setData] = React.useState([])
 
    useEffect(() => {
-        axios.get('http://localhost:8000/data')
+        axios.get('https://instra.onrender.com/data')
         .then((res)=>{setData(res.data)})
         .catch((err)=>{console.log(err)});
 
